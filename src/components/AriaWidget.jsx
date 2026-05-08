@@ -73,11 +73,11 @@ export default function AriaWidget({ topic = "General", onTopicChange }) {
       <TabBar activeTab={activeTab} setActiveTab={setActiveTab} />
 
       <div className="aria-tab-content">
-        <div style={{ display: activeTab === "audio" ? "block" : "none" }}>
-          <AudioCallTab topic={topic} language={language} />
-        </div>
-        <div style={{ display: activeTab === "quests" ? "block" : "none" }}>
-          <RoleplayTab
+  <div style={{ display: activeTab === "audio" ? "block" : "none" }}>
+    <AudioCallTab topic={topic} language={language} isActive={activeTab === "audio"} />
+  </div>
+  <div style={{ display: activeTab === "quests" ? "block" : "none" }}>
+    <RoleplayTab
             topic={topic}
             language={language}
             onXpEarned={handleXpEarned}
